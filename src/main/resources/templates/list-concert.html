@@ -11,5 +11,13 @@
     <!-- TODO: show delete link for each concert -->
 
     <!-- TODO: Add list of concerts -->
+    <u1>
+        <li th:each="concert: ${concerts}">
+            <a th:href="@{/delete-concert/{id} (id=${concert.id})}">Delete</a>
+            <span th:text ="${concert.title}"></span>
+            <span th:text ="${concert.performer}"></span>
+            <span th:text ="${concert.date}"></span>
+        </li>
+    </u1>
 </body>
 </html>
